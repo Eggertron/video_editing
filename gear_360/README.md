@@ -21,10 +21,16 @@ The Gear 360 ActionDirector will stitch the Gear 360 videos with these propertie
 - Audio bit rate: 32
 
 ## FFmpeg
-(Download FFmpeg)[https://ffmpeg.org/download.html] for you system.
+[Download FFmpeg](https://ffmpeg.org/download.html) for you system.
 
 ### Merge Audio and Video Tracks
 Use the following command to Merge together a video and audio track. The lengths of each track must be the same.
 ```
 ffmpeg -i video.mp4 -i audio.m4a -acodec copy -vcodec copy output.mp4
+```
+
+### Demultiplex (separate) All Audio and Video Streams
+Use the following command to demultiplex a video
+```
+ffmpeg -i muxed.mp4
 ```
