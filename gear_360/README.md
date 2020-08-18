@@ -30,7 +30,11 @@ ffmpeg -i video.mp4 -i audio.m4a -acodec copy -vcodec copy output.mp4
 ```
 
 ### Demultiplex (separate) All Audio and Video Streams
-Use the following command to demultiplex a video
+Use the following command to find the stream maps
 ```
 ffmpeg -i muxed.mp4
+```
+And then use the following command to demultiplex a video
+```
+ffmpeg.exe -i input.mp4 -c:v copy -map 0:0 output.m4v -c:a copy -map 0:1 output.m4a
 ```
