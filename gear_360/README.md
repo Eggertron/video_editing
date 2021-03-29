@@ -1,5 +1,12 @@
 # Samsung Gear 360
 
+## Gear 360 Phone App Stabilization
+The Gear 360 Smart Phone App has video stabilization which is not available in the 
+Gear 360 ActionDirector Software. Enable the Stabilize option from in the Gallery Settings of 
+the Gear 360 Smart Phone App and download the video from the camera to the smart phone to 
+stabilize the videos that require stabilization. This is highly recommended for videos that 
+are not stationary!
+
 ## Gear 360 Camera 360 Video Properties
 The Gear 360 Camera records in 360 with these properties
 - Video Codec: MPEG-H Part2/HEVC (H.265)(hvc1)
