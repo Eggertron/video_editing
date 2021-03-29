@@ -1,4 +1,7 @@
 # Samsung Gear 360
+Before recording 360 videos on the Gear 360 camera, be sure to check that the video record 
+settings are correct. If the battery runs out on the Gear 360 camera the settings can reset 
+to the default settings, like the ones below.
 
 ## Gear 360 Phone App Stabilization
 The Gear 360 Smart Phone App has video stabilization which is not available in the 
