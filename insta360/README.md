@@ -44,6 +44,15 @@ ffmpeg -framerate 25 -vcodec libx264 -pix_fmt yuv420p -i title_screen.png -t 10 
 If you want to create a title screen that does not look warped across the verticle plane, you will want to use `Blender` to generate
 and equirectangular title screen.
 
+#### Blender
+
+- Open a new blender project and use a black background
+- Place text around the camera
+- Change Camera Type to Panoramic
+- Change Panorama Type to Equirectangular
+- Go to Dimensions and change the resolution to 5760x2880
+- Render and export `png`
+
 ### 360 Video Content
 
 Use `Insta360 STUDIO` to trim and export your Insta360 video into `mp4` files. Some key pointers to trimming and exporting,
