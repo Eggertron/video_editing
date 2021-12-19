@@ -8,6 +8,7 @@ I've come up with a very basic way of merging videos and adding title screen cli
 - [MP4 Joiner](https://www.mp4joiner.org/en/)
 - [FFMPEG](https://ffmpeg.org/)
 - [Insta360 STUDIO 2021](https://www.insta360.com/download/insta360-onex2)
+- [Blender](https://www.blender.org/)
 
 ## Video Specs
 
@@ -34,11 +35,14 @@ The basic template consists of
 ### Title Screen
 
 Creating a very basic Title Screen is as simple as generating a `png` file with a resolution of 5760x2880 and processing that `png` 
-in `FFMPEG` to create and `mp4` output.
+in `FFMPEG` to create and `mp4` output. Place all your text as close to the center of the image.
 
 ```
 ffmpeg -framerate 25 -vcodec libx264 -pix_fmt yuv420p -i title_screen.png -t 10 out.mp4
 ```
+
+If you want to create a title screen that does not look warped across the verticle plane, you will want to use `Blender` to generate
+and equirectangular title screen.
 
 ### 360 Video Content
 
