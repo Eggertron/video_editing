@@ -46,11 +46,30 @@ and equirectangular title screen.
 
 #### Blender
 
-- Open a new blender project and use a black background
+- Set your Renderer to Cycles
+  - Go to `Rendering` tab
+  - `Render Properties` in the `Properties` view
+  - `Render Engine` and select `Cycles`
+- use a black background
+  - `World Properties`
+  - drop down `Surface`
+  - Select `color` from wheel
 - Place text around the camera
+  - press `Shift + A`
+  - select `Text`
+  - select your new text object
+  - press `tab` to edit the text
 - Change Camera Type to Panoramic
+  - select your camera object
+  - Go to `Object data properties`
+  - select `Lens`
+  - drop down `type`
+  - select `Panoramic`
 - Change Panorama Type to Equirectangular
-- Go to Dimensions and change the resolution to 5760x2880
+  - drop down `Panorama Type`
+  - select `Equirectangular`
+- Go to Dimensions and change the resolution to 5760x2880.
+  - Go to `Output Properties` and set your resolution.
 - Render and export `png`
 
 ### 360 Video Content
@@ -63,4 +82,15 @@ Use `Insta360 STUDIO` to trim and export your Insta360 video into `mp4` files. S
 
 ### Merging Video Clips
 
+#### MP4Joiner
+
 Use `MP4Joiner` GUI to merge the `mp4` videos together. Make sure that all videos have the same resolution and framerates.
+
+#### FFMPEG (Transition Effects)
+
+This will probably be the choice merging method especially if you want some scene transition effects. You can find some good examples [here](https://trac.ffmpeg.org/wiki/Xfade).
+For a quick example, check out this dissolve transition
+
+```
+ffmpeg -i inputVideo1.mp4 -i inputVideo2.mp4 -filter_complex xfade=transition=dissolve:duration=2:offset=2 outputVideo.mp4
+```
