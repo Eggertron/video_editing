@@ -29,7 +29,12 @@ and audo specs of
 
 The phone app seems contain more features and is a bit more advanced than the Windows app. Although this may
 be a few extra steps additional for video processing, transferring the files to the phone for editing and
-processing is better. Transfer the output video back to the computer for futher editing and publishing.
+processing is better. Transfer the output video back to the computer for futher editing and publishing. There are
+limitations to take into consideration,
+
+- Max 360 video resolution 3840x1920
+- Max FPS 30
+- Max Bitrate 125
 
 Insta360 app data path
 
