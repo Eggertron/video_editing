@@ -25,6 +25,20 @@ and audo specs of
 - 48000 Hz
 - 32 bits
 
+## Android App Info
+
+The phone app seems contain more features and is a bit more advanced than the Windows app. Although this may
+be a few extra steps additional for video processing, transferring the files to the phone for editing and
+processing is better. Transfer the output video back to the computer for futher editing and publishing.
+
+Insta360 app data path
+
+```
+\Internal storage\Android\data\com.arashivision.insta360akiko\files\Insta360OneR\galleryOriginal\ONEX2
+```
+
+The front/back camera videos are stored in `/Camera01/` and the corresponding LRV data is stored in `/LRV/`
+
 ## Basic Template 360 Video
 
 The basic template consists of 
