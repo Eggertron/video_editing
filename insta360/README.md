@@ -120,5 +120,11 @@ This is an example of "removing" audio from a video without modifing the video s
 copyrighted music.
 
 ```
- ffmpeg.exe -i in.mp4 -vcodec copy -filter:a "volume=0.0"  out.mp4
- ```
+ffmpeg.exe -i in.mp4 -vcodec copy -filter:a "volume=0.0"  out.mp4
+```
+ 
+This is an example of "removing" audio from specified seconds, 29 to 55 and 465 to 541.3 seconds respectively. Keep in mind that the comma needs to be escaped.
+
+```
+ffmpeg -i VID_20230218_170438_00_009.mp4 -vcodec copy -af volume=0:enable='between(t\,29\,55)+between(t\,465\,541.3)' VID_20230218_170438_00_009_fixaudio.mp4
+```
