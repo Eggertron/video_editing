@@ -113,3 +113,12 @@ For a quick example, check out this dissolve transition
 ```
 ffmpeg -i inputVideo1.mp4 -i inputVideo2.mp4 -filter_complex xfade=transition=dissolve:duration=2:offset=2 outputVideo.mp4
 ```
+
+##### Adjust Audio Levels only
+
+This is an example of "removing" audio from a video without modifing the video stream. useful if the background contains 
+copyrighted music.
+
+```
+ ffmpeg.exe -i in.mp4 -vcodec copy -filter:a "volume=0.0"  out.mp4
+ ```
