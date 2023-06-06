@@ -105,6 +105,24 @@ Use `Insta360 STUDIO` to trim and export your Insta360 video into `mp4` files. S
 
 Use `MP4Joiner` GUI to merge the `mp4` videos together. Make sure that all videos have the same resolution and framerates.
 
+#### FFMPEG
+
+create a text file that contains all the video names you want to join together
+
+```
+file video1.mp4
+file video2.mp4
+file video3.mp4
+```
+
+Run the command to merge the files
+
+```
+ffmpeg -f concat -safe 0 -i videolist.txt -c copy -strict unofficial output.mp4
+```
+
+NOTE: it's assumed that the video files are all the same in video type (audio/video/compression/etc)
+
 #### FFMPEG (Transition Effects)
 
 This will probably be the choice merging method especially if you want some scene transition effects. You can find some good examples [here](https://trac.ffmpeg.org/wiki/Xfade).
