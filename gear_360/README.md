@@ -48,3 +48,18 @@ And then use the following command to demultiplex a video
 ```
 ffmpeg.exe -i input.mp4 -c:v copy -map 0:0 output.m4v -c:a copy -map 0:1 output.m4a
 ```
+
+### Convert Dual Fisheye to Equirectangular
+This is the ffmpeg parameters that I use to convert my raw Gear 360 videos into 
+equirectangular format
+```sh
+ffmpeg -i %1 -vf v360=dfisheye:e:ih_fov=188:iv_fov=192.5 -y %1.fixed.mp4
+```
+If I want to trim down from a starting point of the video (44 seconds in) to 10 seconds
+```sh
+ffmpeg -ss 00:00:44 -t 10 -i %1 -vf v360=dfisheye:e:ih_fov=188:iv_fov=192.5 -y %1.fixed.mp4
+```
+Sometime i'll mount my camera upside, so i'll need to flip the video as well
+```sh
+ffmpeg -ss 00:00:44 -t 10 -i %1 -vf v360=dfisheye:e:ih_fov=188:iv_fov=192.5:v_flip=1:h_flip=1 -y %1.fixed.mp4
+```
